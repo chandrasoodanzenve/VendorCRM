@@ -22,12 +22,14 @@ export default function App() {
   }
 
   return (
+    
     <div
       style={{
         display: "flex",
         width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
+        height: "100vh",
+        maxHeight: "100vh",
+        overflow: "hidden",
       }}
     >
       <Sidebar
@@ -37,7 +39,15 @@ export default function App() {
         onLogout={handleLogout}
       />
 
-      <main style={{ flex: 1, minWidth: 0, overflowY: "auto" }}>
+      <main
+        style={{
+          flex: 1,
+          minWidth: 0,
+          height: "100vh",
+          overflowY: "auto",
+          overflowX: "hidden",
+        }}
+      >
         {activePage === "bi-dashboard" ? (
           <BIDashboard
             userRole={auth.role}

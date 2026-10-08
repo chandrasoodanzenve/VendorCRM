@@ -13,6 +13,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import "./VendorLoginPage.css";
+import logo from "../assets/zenve-zippy-logo-gr95c5PX.png";
 
 const DEMO_VENDORS = [
   {
@@ -102,8 +103,28 @@ export default function VendorLoginPage({ onLogin }) {
     <div className="login-viewport">
       <div className="login-panel-card">
         <div className="login-brand-block">
-          <div className="login-logo-badge">
-            <Store size={26} />
+          <div
+            style={{
+              width: "64px",
+              height: "64px",
+              margin:
+                "0 auto 12px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={logo}
+              alt="Vendor CRM Logo"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
           </div>
           <h2>Vendor CRM</h2>
           <p>Enterprise Operations & Analytics Portal</p>

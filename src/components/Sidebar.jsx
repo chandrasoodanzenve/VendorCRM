@@ -1,6 +1,7 @@
 import React from "react";
 import { BarChart3, Terminal, Store, LogOut } from "lucide-react";
 import "./Sidebar.css";
+import logo from "../assets/zenve-zippy-logo-gr95c5PX.png";
 
 const NAV_ITEMS = [
   {
@@ -21,8 +22,32 @@ export default function Sidebar({ activePage, setActivePage, auth, onLogout }) {
   return (
     <aside className="vendor-sidebar">
       <div className="sidebar-brand">
-        <div className="brand-logo-wrap">
-          <Store size={22} className="brand-logo-icon" />
+        <div
+          className="brand-logo-wrap"
+          style={{
+            width: "50px",
+            height: "50px",
+            minWidth: "40px",
+            borderRadius: "8px",
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "transparent",
+          }}
+        >
+          <img
+            src={logo}
+            alt="Vendor CRM Logo"
+            style={{
+              width: "100%",
+              height: "100%",
+              maxWidth: "50px",
+              maxHeight: "50px",
+              objectFit: "contain",
+              display: "block",
+            }}
+          />
         </div>
         <div className="brand-text">
           <h2>Vendor CRM</h2>
